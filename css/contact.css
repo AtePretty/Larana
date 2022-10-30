@@ -1,29 +1,13 @@
-html {
-    font-size: 65.5%;
-}
-
-*,
-*::before,
-*::after {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Open Sans" sans-serif;
 }
 
 body {
-    font-size: 1.6rem;
+    overflow-x: hidden;
 }
-
-a {
-    text-decoration: none;
-}
-
-li {
-    list-style: none;
-}
-
-
-/* header start */
 
 .navbar {
     background-color: #a18167;
@@ -54,15 +38,6 @@ li {
     font-family: "Permanent Marker", sans-serif;
 }
 
-.navbar-brand small {
-    display: block;
-    font-size: 12px;
-    font-style: italic;
-}
-
-
-/* header tablet, and mobile screen sizes start */
-
 @media only screen and (max-width: 600px) {
     .navbar-brand {
         left: 160px;
@@ -79,4 +54,21 @@ li {
     .navbar-brand .logo-name {
         font-size: 1rem;
     }
+}
+
+.navbar-brand small {
+    display: block;
+    font-size: 12px;
+    font-style: italic;
+}
+
+
+/* contact start */
+
+.header {
+    color: #a18167;
+}
+
+#floatingtextarea {
+    height: 150px
 }
