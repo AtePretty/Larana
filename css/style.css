@@ -23,14 +23,17 @@ input {
   border: none;
 }
 
-@media screen and (max-width: 394px) {
+@media screen and (max-width: 800px) {
   /* ============= Footer Style ============= */
   footer {
     background: #5c4033;
-    padding: 8px;
-    display: flex;
-    flex-direction: column;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
     color: #a9806d;
+    gap: 15px;
+    width: 100vw;
   }
   footer a {
     color: #cdbdb5;
@@ -40,6 +43,7 @@ input {
   }
   footer .newsletter {
     order: 1;
+    grid-area: 1 / 1 / -1 / 2;
   }
   footer form {
     display: flex;
@@ -55,20 +59,40 @@ input {
     height: 40px;
   }
   footer .otherLinks {
-    order: 3;
+    order: 2;
+    grid-area: 1 / 2 / 2 / 4;
   }
   footer .otherLinks nav {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: end;
     gap: 7px;
+  }
+  footer .otherLinks nav a:nth-child(1) {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  footer .otherLinks nav a:nth-child(2) {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  footer .otherLinks nav a:nth-child(3) {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+  footer .otherLinks nav a:nth-child(4) {
+    grid-area: 1 / 4 / 2 / 5;
+  }
+  footer .otherLinks nav a:nth-child(5) {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+  footer .otherLinks nav a:nth-child(6) {
+    grid-area: 2 / 4 / 3 / 5;
   }
   footer .socialLinks {
     display: flex;
     gap: 20px;
     align-items: center;
     margin: 7px 0;
-    order: 2;
+    order: 3;
+    grid-area: 2 / 2 / -1 / -2;
   }
   footer .socialLinks nav {
     display: flex;
@@ -81,7 +105,38 @@ input {
     color: #ffa834;
     font-size: 12px;
     font-weight: 400;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: end;
     order: 4;
+    grid-area: 2 / -1 / -1 / -2;
+  }
+}
+
+@media screen and (max-width: 394px) {
+  /* ============= Footer Style ============= */
+  footer {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  footer .otherLinks {
+    order: 3;
+  }
+  footer .otherLinks nav {
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+  }
+  footer .otherLinks nav a:nth-child(4) {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  footer .otherLinks nav a:nth-child(5) {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  footer .otherLinks nav a:nth-child(6) {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+  footer .socialLinks {
+    order: 2;
   }
 }
