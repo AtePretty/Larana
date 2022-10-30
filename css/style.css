@@ -24,6 +24,43 @@ input {
 }
 
 @media screen and (max-width: 1280px) {
+  /* ============= Hero Style ============= */
+  /* .hero button[data-bs-target] {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+  } */
+
+  /* ============= Product Style ============= */
+  .product {
+    padding: 8vw;
+    /* width: 100vw; */
+    display: grid;
+    grid-template: 1fr 1fr / repeat(4, 1fr);
+    gap: 50px;
+    background: goldenrod;
+  }
+  .product .itemImg {
+    height: 300px;
+    width: 100%;
+    background: white;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  .product .itemImg.odd {
+    transform: rotate(3deg);
+  }
+  .product .itemImg.even {
+    transform: rotate(-3deg);
+  }
+  .product .itemImg img {
+    position: absolute;
+    width: 100%;
+  }
+  .product .itemText {
+    text-align: center;
+  }
+
   /* ============= Footer Style ============= */
   footer {
     background: #5c4033;
