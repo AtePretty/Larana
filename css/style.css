@@ -24,13 +24,6 @@ input {
 }
 
 @media screen and (max-width: 1280px) {
-  /* ============= Hero Style ============= */
-  /* .hero button[data-bs-target] {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-  } */
-
   /* ============= Product Style ============= */
   .product {
     padding: 8vw;
