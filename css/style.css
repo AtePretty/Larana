@@ -34,7 +34,7 @@ input {
     background: goldenrod;
   }
   .product h2 {
-    grid-area: 1 / 1 / 2 / 5;
+    grid-area: 1 / 1 / 2 / -1;
     text-align: center;
   }
   .product .itemImg {
@@ -42,9 +42,11 @@ input {
     width: 100%;
     background: white;
     margin-bottom: 30px;
-    position: relative;
     box-shadow: 1px 1px 10px #000;
     transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .product .itemImg.odd {
     transform: rotate(3deg);
@@ -56,8 +58,7 @@ input {
     transform: rotate(0);
   }
   .product .itemImg img {
-    position: absolute;
-    width: 100%;
+    width: 80%;
   }
   .product .itemText {
     text-align: center;
@@ -161,7 +162,28 @@ input {
   }
 }
 
+@media screen and (max-width: 1156px) {
+  .product .itemImg {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 936px) {
+  .product .itemImg {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 874px) {
+  .product .itemImg {
+    height: 180px;
+  }
+}
+
 @media screen and (max-width: 800px) {
+  .product .itemImg {
+    height: 150px;
+  }
   /* ============= Footer Style ============= */
   footer {
     padding: 40px;
@@ -187,7 +209,60 @@ input {
   }
 }
 
+@media screen and (max-width: 732px) {
+  .product {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .product .itemImg {
+    height: 230px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .product .itemImg {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .product .itemImg {
+    height: 140px;
+  }
+}
+
+@media screen and (max-width: 586px) {
+  .product {
+    grid-template-columns: 1fr 1fr;
+  }
+  .product .itemImg {
+    height: 230px;
+  }
+}
+
+@media screen and (max-width: 502px) {
+  .product .itemImg {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 452px) {
+  .product .itemImg {
+    height: 180px;
+  }
+}
+
 @media screen and (max-width: 394px) {
+  .product {
+    grid-template-columns: 1fr;
+  }
+  .product .itemImg {
+    height: 230px;
+  }
+  .product .itemImg img {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+  }
   /* ============= Footer Style ============= */
   footer {
     padding: 8px;
@@ -215,5 +290,17 @@ input {
   }
   footer > p {
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .product .itemImg {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .product .itemImg {
+    height: 150px;
   }
 }
