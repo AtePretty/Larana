@@ -73,7 +73,7 @@ input {
     padding: 3vw 8vw;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 1fr 0.5fr;
     color: #a9806d;
     gap: 15px;
     width: 100vw;
@@ -86,7 +86,7 @@ input {
   }
   footer .newsletter {
     order: 1;
-    grid-area: 1 / 1 / -1 / 2;
+    grid-area: 1 / 1 / 3 / 2;
   }
   footer form {
     display: flex;
@@ -168,6 +168,34 @@ input {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  /* ============= Footer Style ============= */
+  footer {
+    grid-template-rows: 1fr 0.5fr 0.5fr;
+  }
+  footer :is(.newsletter, .otherLinks, .socialLinks) {
+    margin: 10px 0;
+  }
+  footer .otherLinks nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  footer .otherLinks nav a:nth-child(5) {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+  footer .otherLinks nav a:nth-child(6) {
+    grid-area: 2 / 4 / 3 / 5;
+  }
+  footer .socialLinks {
+    grid-area: 2 / 2 / 3 / 4;
+    justify-content: end;
+  }
+  footer > p {
+    grid-area: 3 / 1 / 4 / -1;
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 936px) {
   .product .itemImg {
     height: 200px;
@@ -191,6 +219,10 @@ input {
   footer form {
     margin: 7px 0;
   }
+  footer .otherLinks {
+    order: 2;
+    grid-area: 1 / 2 / 3 / 4;
+  }
   footer .otherLinks nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -202,10 +234,15 @@ input {
     grid-area: 2 / 4 / 3 / 5;
   }
   footer .socialLinks {
-    justify-content: start;
+    justify-content: center;
+    grid-area: 3 / 1 / 4 / 2;
   }
   footer .socialLinks nav {
     gap: 7px;
+  }
+  footer > p {
+    grid-area: 3 / 2 / 4 /4;
+    justify-content: end;
   }
 }
 
