@@ -137,6 +137,9 @@ input {
   .cart .orderList :is([type="submit"], [type="reset"]) {
     padding: 10px 20px;
   }
+  .cart .orderList .cancel {
+    display: none;
+  }
   .cart .allItems {
     width: 60%;
     display: grid;
@@ -542,15 +545,19 @@ input {
   }
 
   /* ============= Cart Style ============= */
+  .cart {
+    display: flex;
+    flex-direction: column;
+  }
   .cart .orderList {
     width: 100%;
   }
   .cart .allItems {
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 20px;
   }
   .cart .allItems .orderItem {
-    height: 259px;
+    height: 300px;
   }
 }
 
@@ -558,6 +565,11 @@ input {
   /* ============= Product Style ============= */
   .product .itemImg {
     height: 200px;
+  }
+
+  /* ============= Cart Style ============= */
+  .cart .allItems .orderItem {
+    height: 280px;
   }
 }
 
@@ -569,14 +581,21 @@ input {
 
   /* ============= Cart Style ============= */
   .cart {
-    display: flow-root;
+    gap: 20px;
   }
   .cart .orderList {
     overflow: hidden;
   }
   .cart .orderList .table {
+    display: block;
     overflow-x: auto;
-    width: 350px;
+    white-space: nowrap;
+  }
+  .cart .orderList .table table {
+    width: 400px;
+  }
+  .cart .allItems .orderItem {
+    height: 250px;
   }
 }
 
@@ -595,6 +614,13 @@ input {
   }
 
   /* ============= Cart Style ============= */
+  .cart {
+    padding: 20px 15px;
+  }
+  .cart .orderList .cancel {
+    display: table-cell;
+    text-align: center;
+  }
   .cart .allItems {
     display: none;
   }
