@@ -66,6 +66,117 @@ input {
     padding-top: 0;
   }
 
+  /* ============= Cart Style ============= */
+  .cart {
+    display: flex;
+    padding: 8vw;
+    gap: 50px;
+  }
+  .cart .orderList {
+    order: 1;
+    width: 40%;
+    padding: 20px;
+    background: rgb(184, 231, 255);
+    position: relative;
+    height: fit-content;
+  }
+  .cart .orderList h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .cart .orderList table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .cart .orderList table thead {
+    background: rgb(0, 164, 197);
+  }
+  .cart .orderList table thead tr th {
+    padding: 20px 0;
+  }
+  .cart .orderList table tbody tr td {
+    padding: 15px 0;
+    border-bottom: 2px solid;
+  }
+  .cart .orderList table tbody tr td input {
+    width: 40px;
+    padding: 10px 0;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+  .cart .orderList table tbody tr td select {
+    width: 50px;
+    padding: 10px 0;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+  .cart .orderList table tbody tr .name {
+    width: 150px;
+    padding: 10px 0;
+    text-align: center;
+  }
+  .cart .orderList table tbody tr .price {
+    width: 70px;
+    padding: 10px 0;
+    text-align: center;
+  }
+  .cart .orderList p {
+    text-align: end;
+    margin: 20px 10px;
+  }
+  .cart .orderList p span {
+    margin-left: 40px;
+  }
+  .cart .orderList .buttons {
+    display: flex;
+    justify-content: end;
+    gap: 25px;
+  }
+  .cart .orderList :is([type="submit"], [type="reset"]) {
+    padding: 10px 20px;
+  }
+  .cart .allItems {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    height: fit-content;
+  }
+  .cart .allItems .orderItem {
+    height: 259px;
+    background: #e93578;
+    position: relative;
+  }
+  .cart .allItems .orderItem h3 {
+    height: 50px;
+    background: rgb(92, 90, 90);
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+  }
+  .cart .allItems .orderItem span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 34px;
+    background: rgb(253, 220, 220);
+    line-height: 34px;
+    text-align: center;
+  }
+  .cart .allItems .orderItem i {
+    position: absolute;
+    right: 10px;
+    bottom: 60px;
+    color: #fff;
+  }
+
   /* ============= Footer Style ============= */
   footer {
     background: #5c4033;
@@ -166,9 +277,33 @@ input {
   .product .itemImg {
     height: 250px;
   }
+
+  /* ============= Cart Style ============= */
+  .cart {
+    gap: 30px;
+  }
+  .cart .allItems {
+    gap: 15px;
+  }
+  .cart .allItems .orderItem {
+    height: 230px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
+  /* ============= Cart Style ============= */
+  .cart {
+    gap: 40px;
+  }
+  .cart .orderList {
+    width: 50%;
+  }
+  .cart .allItems {
+    width: 50%;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
   /* ============= Footer Style ============= */
   footer {
     grid-template-rows: 1fr 0.5fr 0.5fr;
