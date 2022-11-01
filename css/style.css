@@ -336,6 +336,25 @@ input {
   .product .itemImg {
     height: 200px;
   }
+
+  /* ============= Cart Style ============= */
+  .cart {
+    display: grid;
+    grid-template-rows: 0.5fr 1fr;
+    gap: 50px;
+  }
+  .cart .orderList {
+    order: 0;
+    margin: 0 auto;
+    width: 60%;
+  }
+  .cart .allItems {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+  }
+  .cart .allItems .orderItem {
+    height: 259px;
+  }
 }
 
 @media screen and (max-width: 874px) {
@@ -346,12 +365,28 @@ input {
   .product .itemImg {
     height: 230px;
   }
+
+  /* ============= Cart Style ============= */
+  .cart .orderList {
+    width: 450px;
+  }
+  .cart .allItems .orderItem {
+    height: 220px;
+  }
 }
 
 @media screen and (max-width: 800px) {
   /* ============= Product Style ============= */
   .product .itemImg {
     height: 200px;
+  }
+
+  /* ============= Cart Style ============= */
+  .cart .allItems {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .cart .allItems .orderItem {
+    height: 259px;
   }
 
   /* ============= Footer Style ============= */
@@ -438,6 +473,14 @@ input {
   /* ============= Product Style ============= */
   .product .itemImg {
     height: 180px;
+  }
+
+  /* ============= Cart Style ============= */
+  .cart .orderList {
+    width: 400px;
+  }
+  .cart .allItems .orderItem {
+    height: 235px;
   }
 }
 
