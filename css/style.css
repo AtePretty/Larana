@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 html {
   font-size: 62.5%;
 }
@@ -38,6 +38,70 @@ input {
   #payment .modal-footer {
     border-top: none;
     justify-content: center;
+  }
+
+  /* ============= Receipt Style ============= */
+  .receipt {
+    padding: 8vw;
+    display: grid;
+    grid-template: 60px 1fr 40px / 0.5fr 0.5fr 1fr;
+    row-gap: 20px;
+  }
+  .receipt h1 {
+    grid-area: 1 / 1 / 2 / 4;
+    text-align: center;
+  }
+  .receipt .information {
+    grid-area: 2 / 1 / 3 / 3;
+    margin-right: 30px;
+    margin-top: 35px;
+  }
+  .receipt .information p span {
+    display: block;
+    background: rgb(0, 255, 221);
+    margin: 5px 0 15px;
+    padding: 10px 20px;
+  }
+  .receipt .itemBought {
+    margin-left: 30px;
+  }
+  .receipt .itemBought table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .receipt .itemBought table th {
+    padding: 30px 20px 10px;
+    border-bottom: 2px solid blue;
+  }
+  .receipt .itemBought table td {
+    text-align: center;
+    padding-top: 20px;
+  }
+  .receipt .itemBought table td.quantity {
+    width: 15%;
+  }
+  .receipt .itemBought table tr > td:nth-child(2) {
+    width: 15%;
+  }
+  .receipt .itemBought table td.name {
+    width: 45%;
+  }
+  .receipt .itemBought table td.price {
+    width: 25%;
+  }
+  .receipt .itemBought table tr:last-child {
+    border-bottom: 2px solid blue;
+  }
+  .receipt .itemBought table tr:last-child td {
+    padding-bottom: 20px;
+  }
+  .receipt p.total {
+    grid-area: 3 / 3 / 4 / 4;
+    text-align: end;
+    margin-right: 30px;
+  }
+  .receipt p.date {
+    grid-area: 3 / 1 / 4 / 2;
   }
 
   /* ============= Product Style ============= */
@@ -250,7 +314,7 @@ input {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     text-align: end;
     gap: 7px;
-    grid-row-gap: 20px;
+    row-gap: 20px;
   }
   footer .otherLinks nav a:nth-child(1) {
     grid-area: 1 / 1 / 2 / 2;
@@ -320,6 +384,14 @@ input {
 }
 
 @media screen and (max-width: 1024px) {
+  /* ============= Receipt Style ============= */
+  .receipt .information {
+    margin-right: 15px;
+  }
+  .receipt .itemBought {
+    margin-left: 15px;
+  }
+
   /* ============= Cart Style ============= */
   .cart {
     gap: 40px;
@@ -360,6 +432,21 @@ input {
   footer > p {
     grid-area: 3 / 1 / 4 / -1;
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 976px) {
+  /* ============= Receipt Style ============= */
+  .receipt .itemBought {
+    overflow: hidden;
+  }
+  .receipt .itemBought .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .receipt .itemBought .table table {
+    width: 400px;
   }
 }
 
@@ -473,6 +560,27 @@ input {
 }
 
 @media screen and (max-width: 732px) {
+  /* ============= Receipt Style ============= */
+  .receipt {
+    display: flex;
+    flex-direction: column;
+  }
+  .receipt .information {
+    margin-right: 0;
+  }
+  .receipt .itemBought {
+    overflow: hidden;
+    margin-left: 0;
+  }
+  .receipt .itemBought .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .receipt .itemBought .table table {
+    width: 100%;
+  }
+
   /* ============= Product Style ============= */
   .product .itemImg {
     height: 200px;
@@ -485,7 +593,7 @@ input {
 
   /* ============= Footer Style ============= */
   footer {
-    grid-column-gap: 50px;
+    column-gap: 50px;
   }
   footer .newsletter {
     grid-area: 1 / 1 / 3 / 3;
@@ -495,7 +603,7 @@ input {
   }
   footer .otherLinks nav {
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 20px;
+    column-gap: 20px;
   }
   footer .otherLinks nav a:nth-child(1) {
     grid-area: 1 / 1 / 2 / 2;
@@ -615,6 +723,11 @@ input {
 }
 
 @media screen and (max-width: 502px) {
+  /* ============= Receipt Style ============= */
+  .receipt .itemBought .table table {
+    width: 420px;
+  }
+
   /* ============= Product Style ============= */
   .product .itemImg {
     height: 200px;
