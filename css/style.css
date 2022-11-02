@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 html {
   font-size: 62.5%;
 }
@@ -10,8 +11,9 @@ html {
 }
 body {
   font-size: 1.6rem;
-  font-family: Helvetica, sans-serif;
+  font-family: Poppins, sans-serif;
 }
+
 a {
   text-decoration: none;
 }
@@ -24,6 +26,20 @@ input {
 }
 
 @media screen and (max-width: 1280px) {
+  /* ============= Modal Style ============= */
+  #payment .modal-header {
+    justify-content: center;
+    border-bottom: none;
+  }
+  .cardNumber {
+    border-bottom: 1px solid #000;
+    background: rgba(0, 0, 0, 0.05);
+  }
+  #payment .modal-footer {
+    border-top: none;
+    justify-content: center;
+  }
+
   /* ============= Product Style ============= */
   .product {
     padding: 8vw;
@@ -93,6 +109,7 @@ input {
   }
   .cart .orderList table thead tr th {
     padding: 20px 0;
+    text-align: center;
   }
   .cart .orderList table tbody tr td {
     padding: 15px 0;
@@ -134,7 +151,7 @@ input {
     justify-content: end;
     gap: 25px;
   }
-  .cart .orderList :is([type="submit"], [type="reset"]) {
+  .cart .orderList [type="button"] {
     padding: 10px 20px;
   }
   .cart .orderList .cancel {
@@ -149,8 +166,13 @@ input {
   }
   .cart .allItems .orderItem {
     height: 259px;
-    background: #e93578;
+    background: #605d4093;
     position: relative;
+  }
+  .cart .allItems .orderItem .orderImg img {
+    width: 15rem;
+    display: block;
+    margin: 5.55rem auto;
   }
   .cart .allItems .orderItem h3 {
     height: 50px;
@@ -162,6 +184,7 @@ input {
     left: 0;
     width: 100%;
     color: #fff;
+    margin-bottom: 0;
   }
   .cart .allItems .orderItem span {
     position: absolute;
@@ -291,6 +314,9 @@ input {
   .cart .allItems .orderItem {
     height: 230px;
   }
+  .cart .allItems .orderItem .orderImg img {
+    margin: 5.3rem auto;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -305,6 +331,9 @@ input {
     width: 50%;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+  }
+  .cart .allItems .orderItem .orderImg img {
+    margin: 4.7rem auto;
   }
 
   /* ============= Footer Style ============= */
@@ -358,6 +387,9 @@ input {
   .cart .allItems .orderItem {
     height: 259px;
   }
+  .cart .allItems .orderItem .orderImg img {
+    margin: 6rem auto;
+  }
 }
 
 @media screen and (max-width: 874px) {
@@ -376,6 +408,10 @@ input {
   .cart .allItems .orderItem {
     height: 220px;
   }
+  .cart .allItems .orderItem .orderImg img {
+    margin: 5rem auto;
+    width: 130px;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -390,6 +426,10 @@ input {
   }
   .cart .allItems .orderItem {
     height: 259px;
+  }
+  .cart .allItems .orderItem .orderImg img {
+    margin: 6rem auto;
+    width: 150px;
   }
 
   /* ============= Footer Style ============= */
@@ -438,6 +478,11 @@ input {
     height: 200px;
   }
 
+  /* ============= Cart Style ============= */
+  .cart .allItems .orderItem .orderImg img {
+    width: 130px;
+  }
+
   /* ============= Footer Style ============= */
   footer {
     grid-column-gap: 50px;
@@ -484,6 +529,10 @@ input {
   }
   .cart .allItems .orderItem {
     height: 235px;
+  }
+  .cart .allItems .orderItem .orderImg img {
+    width: 120px;
+    margin: 6.5rem auto;
   }
 }
 
@@ -559,6 +608,10 @@ input {
   .cart .allItems .orderItem {
     height: 300px;
   }
+  .cart .allItems .orderItem .orderImg img {
+    width: 160px;
+    margin: 7.5rem auto;
+  }
 }
 
 @media screen and (max-width: 502px) {
@@ -596,6 +649,10 @@ input {
   }
   .cart .allItems .orderItem {
     height: 250px;
+  }
+  .cart .allItems .orderItem .orderImg img {
+    width: 120px;
+    margin: 7rem auto;
   }
 }
 
