@@ -1159,3 +1159,61 @@ input {
     height: 150px;
   }
 }
+
+/* header start */
+
+.navbar {
+    background-color: #a18167;
+}
+
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -15px;
+}
+
+.navbar-toggler {
+    outline: none;
+    box-shadow: none;
+    border-color: #fff;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-brand .logo-name {
+    font-size: 1.8rem;
+    font-family: "Permanent Marker", sans-serif;
+}
+
+.navbar-brand small {
+    display: block;
+    font-size: 12px;
+    font-style: italic;
+}
+
+
+/* header tablet, and mobile screen sizes start */
+
+@media only screen and (max-width: 600px) {
+    .navbar-brand {
+        left: 160px;
+    }
+    .navbar-brand .logo-name {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .navbar-brand {
+        left: 120px;
+    }
+    .navbar-brand .logo-name {
+        font-size: 1rem;
+    }
+}
