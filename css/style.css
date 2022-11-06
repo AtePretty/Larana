@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Kristi&display=swap');
 html {
   font-size: 62.5%;
+  /* overflow: scroll;
+  overflow-x: hidden; */
+}
+::-webkit-scrollbar {
+  width: 0;
 }
 *,
 *::before,
@@ -13,7 +19,6 @@ body {
   font-size: 1.6rem;
   font-family: Poppins, sans-serif;
 }
-
 a {
   text-decoration: none;
 }
@@ -23,6 +28,63 @@ li {
 input {
   outline: none;
   border: none;
+}
+
+.policies.modal-content {
+  background: rgb(171, 159, 140);
+  border: none;
+  padding: 50px 60px 50px;
+  color: #2a1504;
+}
+.policies .modal-header {
+  border: none;
+}
+.policies .modal-header h1 {
+  color: #241206;
+  text-transform: uppercase;
+  font-size: 30px;
+  border-bottom: 2px solid;
+}
+.policies .modal-body {
+  background: rgb(198, 190, 178);
+  margin-top: 30px;
+}
+.heroMain .carousel-indicators button {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+.carousel-caption {
+  position: absolute;
+  right: 0%;
+  bottom: 25rem;
+  left: 5%;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  text-align: start;
+}
+.carousel-caption h1 {
+  font-size: 40px;
+  font-family: 'Fredericka the Great', cursive;
+  color: #ffc77d;
+}
+.carousel-caption p {
+  font-size: 20px;
+  width: 350px;
+  padding-top: 30px;
+}
+
+.mine.dropdown-menu {
+  background: rgb(103, 71, 29);
+}
+.mine.dropdown-menu li a:hover {
+  background: rgb(148, 97, 29);
+}
+.mine.dropdown-menu li a {
+  color: rgb(255, 229, 195);
+}
+.mine.dropdown-menu li a {
+  color: rgb(255, 229, 195);
 }
 
 @media screen and (min-width: 1280px) {
@@ -115,28 +177,124 @@ input {
     display: grid;
     grid-template: 60px 1fr 1fr / repeat(4, 1fr);
     gap: 50px;
-    background: goldenrod;
+    background: rgba(72, 46, 0, 0.258);
+  }
+  .product.one {
+    padding: 8vw;
+    padding-bottom: 4vw;
+  }
+  .product.two {
+    padding: 8vw;
+    padding-top: 4vw;
   }
   .product h2 {
     grid-area: 1 / 1 / 2 / -1;
-    text-align: center;
+    margin: 0 auto;
+    width: 300px;
+    background-image: url("/img/h2Back4.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(219, 219, 219);
+    font-size: 35px;
+    font-weight: 900;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    text-transform: uppercase;
+  }
+  .product .item {
+    position: relative;
   }
   .product .itemImg {
     height: 300px;
     width: 100%;
-    background: white;
+    background: #ba9a80;
     margin-bottom: 30px;
-    box-shadow: 1px 1px 10px #000;
     transition: all 0.5s ease;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+  .product.show {
+    display: flex;
+  }
   .product .itemImg.odd {
     transform: rotate(3deg);
+    position: relative;
+  }
+  .product .itemImg.odd::before {
+    position: absolute;
+    content: "";
+    border: 15px solid transparent;
+    border-image: url("/img/frame.png") 100 repeat;
+    border-image-outset: 1.5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .product .item.one::before {
+    position: absolute;
+    content: "I vowed I would always be yours, cause we survived the Great War";
+    font-family: "Kristi", cursive;
+    font-size: 3rem;
+    left: -150px;
+    top: -40px;
+    transform: rotate(-90deg);
+    opacity: 0.1;
+    z-index: -1;
+    width: 200px;
+    line-height: 1;
+  }
+  .product .item.one::after {
+    position: absolute;
+    content: "There's no morning glory, it was war it wasn't fair";
+    font-family: "Kristi", cursive;
+    font-size: 1rem;
+    left: -90px;
+    bottom: 120px;
+    transform: rotate(deg);
+    opacity: 0.1;
+    z-index: -1;
+    width: 50px;
+  }
+  .product .item.two::before {
+    position: absolute;
+    content: "";
+    left: -100px;
+    top: -40px;
+    transform: rotate(-20deg);
+    opacity: 1;
+    z-index: -1;
+    width: 30px;
+    height: 30px;
+  }
+  .product .item.two::after {
+    position: absolute;
+    content: url("");
+    font-family: "Kristi", cursive;
+    font-size: 30px;
+    left: -130px;
+    bottom: 120px;
+    transform: rotate(-45deg);
+    opacity: 1;
+    z-index: -1;
+    width: 300px;
   }
   .product .itemImg.even {
     transform: rotate(-3deg);
+  }
+  .product .itemImg.even::before {
+    position: absolute;
+    content: "";
+    border: 15px solid transparent;
+    border-image: url("/img/frame.png") 100 repeat;
+    border-image-outset: 1.5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
   }
   .product .itemImg:hover {
     transform: rotate(0);
@@ -146,6 +304,9 @@ input {
   }
   .product .itemText {
     text-align: center;
+  }
+  .product .itemText .dollars {
+    color: #aa542c;
   }
 
   /* ============= Cart Style ============= */
@@ -282,6 +443,7 @@ input {
   }
   footer a {
     color: #cdbdb5;
+    color: #cdbdb5 !important;
   }
   footer :is(.newsletter, .otherLinks, .socialLinks) {
     margin: 15px 0;
@@ -305,7 +467,7 @@ input {
     height: 40px;
   }
   footer [type="checkbox"] {
-    margin: 0 20px;
+    margin: 0 20px 0 0;
   }
   footer .otherLinks {
     order: 2;
@@ -365,12 +527,6 @@ input {
 }
 
 @media screen and (max-width: 1280px) {
-  /* ============= Header Style ============= */
-  .heroMain {
-    width: 100%;
-    height: 100vh;
-  }
-
   /* ============= Modal Style ============= */
   #payment .modal-header {
     justify-content: center;
@@ -387,7 +543,7 @@ input {
 
   /* ============= Receipt Style ============= */
   .receipt {
-    padding: 8vw;
+    padding: 100px 100px 50px;
     display: grid;
     grid-template: 60px 1fr 40px / 0.5fr 0.5fr 1fr;
     row-gap: 20px;
@@ -454,7 +610,7 @@ input {
     display: grid;
     grid-template: 60px 1fr 1fr / repeat(4, 1fr);
     gap: 50px;
-    background: goldenrod;
+    background: rgba(72, 46, 0, 0.258);
   }
   .product.one {
     padding: 8vw;
@@ -466,18 +622,29 @@ input {
   }
   .product h2 {
     grid-area: 1 / 1 / 2 / -1;
-    text-align: center;
+    margin: 0 auto;
+    color: #6e2d0f;
+    font-size:  60px;
+    font-weight: 900;
+    font-family: Kristi, cursive;
+    text-transform: uppercase;
+  }
+  .product .item {
+    position: relative;
+    cursor: pointer;
   }
   .product .itemImg {
     height: 300px;
     width: 100%;
-    background: white;
+    background: #ba9a80;
     margin-bottom: 30px;
-    box-shadow: 1px 1px 5px goldenrod;
     transition: all 0.5s ease;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .product.show {
+    display: flex;
   }
   .product .itemImg.odd {
     transform: rotate(3deg);
@@ -493,6 +660,54 @@ input {
     height: 100%;
     top: 0;
     left: 0;
+  }
+  .product .item.one::before {
+    position: absolute;
+    content: "I vowed I would always be yours, cause we survived the Great War";
+    font-family: "Kristi", cursive;
+    font-size: 3rem;
+    left: -150px;
+    top: -40px;
+    transform: rotate(-90deg);
+    opacity: 0.1;
+    z-index: -1;
+    width: 200px;
+    line-height: 1;
+  }
+  .product .item.one::after {
+    position: absolute;
+    content: "There's no morning glory, it was war it wasn't fair";
+    font-family: "Kristi", cursive;
+    font-size: 1rem;
+    left: -90px;
+    bottom: 120px;
+    transform: rotate(deg);
+    opacity: 0.1;
+    z-index: -1;
+    width: 50px;
+  }
+  .product .item.two::before {
+    position: absolute;
+    content: "";
+    left: -100px;
+    top: -40px;
+    transform: rotate(-20deg);
+    opacity: 1;
+    z-index: -1;
+    width: 30px;
+    height: 30px;
+  }
+  .product .item.two::after {
+    position: absolute;
+    content: url("");
+    font-family: "Kristi", cursive;
+    font-size: 30px;
+    left: -130px;
+    bottom: 120px;
+    transform: rotate(-45deg);
+    opacity: 1;
+    z-index: -1;
+    width: 300px;
   }
   .product .itemImg.even {
     transform: rotate(-3deg);
@@ -517,11 +732,21 @@ input {
   .product .itemText {
     text-align: center;
   }
+  .product .itemText .dollars {
+    color: #6e2d0f;
+    background: #df9e80;
+    display: block;
+    padding: 5px 20px;
+    width: 100px;
+    margin: 0 auto;
+    border-bottom-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
 
   /* ============= Cart Style ============= */
   .cart {
     display: flex;
-    padding: 8vw;
+    padding: 10vw 8vw 8vw;
     gap: 50px;
   }
   .cart .orderList {
@@ -651,7 +876,8 @@ input {
     width: 100%;
   }
   footer a {
-    color: #cdbdb5;
+    color: #cdbdb5 !important;
+    cursor: pointer;
   }
   footer :is(.newsletter, .otherLinks, .socialLinks) {
     margin: 15px 0;
@@ -675,7 +901,7 @@ input {
     height: 40px;
   }
   footer [type="checkbox"] {
-    margin: 0 20px;
+    margin: 0 20px 0 0;
   }
   footer .otherLinks {
     order: 2;
@@ -709,7 +935,7 @@ input {
   footer .socialLinks {
     display: flex;
     gap: 20px;
-    align-items: center;
+    /* align-items: center; */
     margin: 7px 0;
     order: 3;
     grid-area: 2 / 2 / -1 / -2;
@@ -1191,59 +1417,345 @@ input {
   }
 }
 
-/* header start */
-
+/* HEADER */
 .navbar {
-  background-color: #a18167;
+    background: rgb(72, 45, 0);
+    max-width: 1280px!important;
+    margin: 0 auto;
+}
+
+.nav-item:hover {
+    background: rgb(71, 46, 8);
+    border-radius: 8px;
 }
 
 .navbar-brand {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: -15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5px;
 }
 
 .navbar-toggler {
-  outline: none;
-  box-shadow: none;
-  border-color: #fff;
+    outline: none;
+    box-shadow: none;
+    border-color: #fff;
 }
 
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon {
-  outline: none;
-  box-shadow: none;
+    outline: none;
+    box-shadow: none;
 }
-
-.navbar-brand .logo-name {
-  font-size: 1.8rem;
-  font-family: "Permanent Marker", sans-serif;
-}
-
-.navbar-brand small {
-  display: block;
-  font-size: 12px;
-  font-style: italic;
-}
-
-/* header tablet, and mobile screen sizes start */
 
 @media only screen and (max-width: 600px) {
-  .navbar-brand {
-    left: 160px;
-  }
-  .navbar-brand .logo-name {
-    font-size: 1.5rem;
-  }
+    .navbar-brand {
+        left: 80px;
+    }
 }
 
 @media only screen and (max-width: 400px) {
-  .navbar-brand {
-    left: 120px;
-  }
-  .navbar-brand .logo-name {
-    font-size: 1rem;
-  }
+    .navbar-brand {
+        left: 70px;
+    }
+}
+
+.navbar-brand small {
+    display: block;
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* contact start */
+
+.header {
+    color: rgb(72, 45, 0);
+}
+
+#floatingtextarea {
+    height: 150px
+}
+.con-icon {
+    background: rgb(72, 45, 0);
+}
+
+.con-message {
+    background: rgb(72, 45, 0);
+}
+
+.con-message:hover {
+    opacity: .8;
+}
+
+
+
+/* map info start */
+
+.map {
+    position: relative;
+    padding-bottom: 50%;
+    margin-top: -55px;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* about us start */
+
+.space-line::after {
+    content: "";
+    width: 140px;
+    position: absolute;
+    display: block;
+    border-bottom: 5px solid rgb(72, 45, 0);
+    padding-top: .5rem;
+}
+
+.objective-icon {
+    border-radius: 13px;
+    width: 8rem;
+}
+
+
+/* signup start */
+
+.sign {
+  margin-top: 90px;
+  margin-bottom: 50px;
+  font-size: 1.8rem;
+}
+
+.banner {
+    border: 2px solid #a18167;
+    border-radius: 8px;
+    background-color: #f5f5dd;
+    width: 450px;
+}
+
+.signup .sign input {
+    height: 3rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.sign h2 {
+  font-size: 30px;
+}
+
+.signup-btn {
+    width: 70%;
+}
+
+.signup-btn button {
+    border: 2px solid #a18167;
+    transition: all .5s ease-in-out;
+    width: 100px;
+    margin: 0 auto 20px;
+}
+
+.signup-btn button:hover {
+    background-color: #a18167;
+    color: #fff;
+}
+
+.signup .sign select {
+    height: 3rem;
+}
+
+
+/* login start */
+
+.login-btn {
+    width: 100%;
+    border: 2px solid #a18167;
+    transition: all .5s ease-in-out;
+}
+
+.login-btn:hover {
+    background-color: #a18167;
+    color: #fff;
+}
+
+.form-group {
+    width: 80%;
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 990px) {
+    .form-group {
+        width: 70%;
+    }
+}
+
+.kuya {
+    color: rgb(72, 45, 0);
+    font-size: 35px;
+    color: rgb(72, 45, 0);
+    transition: all .5s ease-in-out;
+}
+
+.kuya:hover {
+    transform: translateY(.25em);
+    transform: rotate(25deg) scale(1.3);
+}
+
+body.login {
+    background-color: #f2f2f2;
+}
+body.login i {
+  font-family: unset;
+}
+
+/* login form */
+
+.login .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 8vw auto 4vw;
+    width: 450px;
+    height: auto;
+    background-color: #f5f5dd;
+    border: 2px solid #a18167;
+    border-radius: 8px;
+}
+
+.label {
+    margin-top: 20px;
+    font-size: 35px;
+    font-weight: 800;
+    color: rgb(72, 45, 0);
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+}
+
+.sub-title {
+    font-size: 1.5rem;
+}
+
+.login_form {
+    padding: 20px 40px;
+}
+
+.login_form .font {
+    font-size: 1.5rem;
+    color: #130f40;
+}
+
+.login .form-control {
+    font-family: "Font Awesome 5 Free", sans-serif;
+    font-weight: 700;
+}
+
+.login_form input {
+    width: 350px;
+    height: 45px;
+    padding: 0 10px;
+    font-size: 1.8rem;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid silver;
+}
+
+.login_form .font2 {
+    margin-top: 20px;
+}
+
+.login_form button {
+  display: block;
+    margin: 30px auto 5px;
+    width: 200px;
+    height: 45px;
+    font-size: 1.5rem;
+    border: 2px solid #a18167;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.login_form button:hover {
+    background-color: #a18167;
+    color: #eee;
+}
+
+.login_form #email_error,
+.login_form #pass_error {
+    width: 350px;
+    font-size: 1.1rem;
+    color: #c62828;
+    background: rgba(255, 0, 0, 0.1);
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 3px;
+    border: 1px solid #ef9a9a;
+    display: none;
+}
+
+.acc {
+    text-align: center;
+}
+
+.acc a {
+    text-decoration: none;
+}
+
+.sign-in {
+    margin-bottom: 20px;
+}
+
+.sign-with {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.socialmedia img {
+    color: rgb(72, 45, 0);
+    transition: all .5s ease-in-out;
+}
+
+.socialmedia img:hover {
+    transform: translateY(.25em);
+    transform: rotate(25deg) scale(1.3);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 475px) {
+    .container {
+        width: 100%;
+    }
+    .sub-title {
+        font-size: 1rem;
+    }
+    .login_form input {
+        width: 100%;
+    }
+    .login_form button {
+        width: 100%;
+        margin: 40px auto 0;
+    }
+    .login_form #email_error,
+    .login_form #pass_error {
+        width: 100%;
+    }
+    .acc {
+        font-size: .9rem;
+    }
 }
