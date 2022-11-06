@@ -297,7 +297,14 @@ input {
     text-align: center;
   }
   .product .itemText .dollars {
-    color: #aa542c;
+    color: #6e2d0f;
+    background: #df9e80;
+    display: block;
+    padding: 5px 20px;
+    width: 100px;
+    margin: 0 auto;
+    border-bottom-left-radius: 60px;
+    border-top-right-radius: 60px;
   }
 
   /* ============= Cart Style ============= */
