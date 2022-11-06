@@ -1470,8 +1470,16 @@ input {
     color: rgb(72, 45, 0);
 }
 
+.form-control {
+    height: 50px;
+}
+
 #floatingtextarea {
     height: 150px
+}
+
+#floatingtextarea::placeholder {
+    font-size: 1.3rem;
 }
 
 .con-icon {
