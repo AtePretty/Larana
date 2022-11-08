@@ -4,164 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/style.css">
   <script src="https://kit.fontawesome.com/307dd57570.js" crossorigin="anonymous"></script>
   <title>Document</title>
-  <style>
-    .recommend {
-      display: grid;
-      grid-template-columns: 40% 60%;
-      padding: 8vw;
-      background: rgba(72, 46, 0, 0.258);
-    }
-    .recommend .imageImg {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 50px;
-      border: 1px solid black;
-      background: #ba9a80;
-    }
-    .recommend .imageImg > img {
-      width: 70%;
-      padding-top: 30px;
-    }
-    .recommend .otherImg {
-      display: grid;
-      grid-template-columns: repeat(3, calc(100% / 3));
-      width: 100%;
-      overflow: hidden;
-      border-top: 1px solid black;
-      background: #93671b;
-    }
-    .recommend .otherImg div {
-      width: 100%;
-      border-right: 1px solid #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .recommend .otherImg div.none {
-      border-right: none;
-    }
-    .recommend .otherImg img {
-      width: 45%;
-      padding: 20px 0;
-    }
-    .recommend .vote {
-      display: flex;
-      justify-content: center;
-      gap: 8%;
-      margin-top: 30px;
-    }
-    .recommend .vote button {
-      border: none;
-    }
-    .recommend .vote i {
-      font-size: 30px;
-      padding: 10px 40px;
-    }
-    .recommend .details {
-      padding: 0 0 30px 50px;
-    }
-    .recommend .comments {
-      margin-top: 30px;
-      border: 1px solid;
-      padding: 30px 20px;
-      background: #e7bf78;
-    }
-    .recommend .commentItem {
-      margin: 0 30px 20px;
-      border: 1px solid #482d00;
-      /* border-radius: 20px 20px 0 0; */
-      box-shadow: 12px 8px #482d00;
-      background: #eadfd6;
-    }
-    .recommend .author {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      font-size: 16px;
-      padding: 20px 20px 0;
-    }
-    .recommend .authorImg {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      overflow: hidden;
-    }
-    .recommend .authorImg img {
-      width: 100%;
-      height: 100%;
-    }
-    .recommend .time {
-      font-size: 13px;
-      margin-bottom: 15px;
-      display: block;
-      margin-left: 70px;
-    }
-    .recommend .comments p {
-      font-size: 14px;
-      padding: 0 20px;
-    }
-    .recommend .ruinImg {
-      display: flex;
-      gap: 2px;
-      overflow: hidden;
-      padding: 0 20px;
-    }
-    .recommend .ruinImg img {
-      height: 100px;
-    }
-    .recommend .react {
-      display: flex;
-      text-align: center;
-      margin-top: 10px;
-      border-top: 1px solid;
-    }
-    .recommend .like {
-      border-right: 1px solid;
-      width: calc(100% / 3);
-      padding: 10px 0;
-    }
-    .recommend .reply {
-      border-right: 1px solid;
-      width: calc(100% / 3);
-      padding: 10px 0;
-    }
-    .recommend .share {
-      width: calc(100% / 3);
-      padding: 10px 0;
-    }
-    .recommend .add {
-      margin-top: 0px;
-      display: flex;
-    }
-    .recommend .add button {
-      border: none;
-      padding: 10px 0;
-      width: 50%;
-      background: #492f03;
-      color: #dfbc7f;
-    }
-    .recommend .add button:last-child {
-      background: transparent;
-      color: #000;
-      border: 1px solid;
-      border-top: none;
-    }
-    .goBackLink {
-      padding: 80px 0 20px 8vw;
-      background: rgb(173, 113, 9);
-    }
-    @media screen and (min-width: 1280px) {
-      .recommend {
-        padding: 100px;
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -176,18 +23,18 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item ">
-                            <a class="nav-link active text-white fs-5 mx-4" aria-current="page" href="#">Home</a>
+                            <a class="nav-link hover text-white fs-5 mx-4" aria-current="page" href="/html/about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white fs-5 mx-4" href="/html/about.html">About</a>
+                            <a class="nav-link hover text-white fs-5 mx-4" href="/html/cart.html">Cart</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-white fs-5 mx-4" href="/html/contact.html">Contact</a>
+                            <a class="nav-link hover text-white fs-5 mx-4" href="/html/contact.html">Contact</a>
                         </li>
                         <li class="nav-item dropdown">
-                          <a class="nav-link text-white fs-5 mx-4 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
+                          <a class="nav-link hover text-white fs-5 mx-4 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
                           <ul class="dropdown-menu mine">
                             <li><a class="dropdown-item" href="/html/login.html">Login</a></li>
                             <li><a class="dropdown-item" href="/html/signup.html">Sign Up</a></li>
@@ -198,11 +45,10 @@
             </div>
         </nav>
     </header>
-  <div class="goBackLink"><a href="/index.html">Shop</a> > <span>Product</span></div>
   <main class="recommend">
     <section class="image">
       <div class="imageImg">
-        <img src="/img/item1.png" alt="">
+        <img class="bigImg" src="/img/item1.png" alt="">
         <div class="otherImg">
           <div><img src="/img/item1v1.png" alt=""></div>
           <div><img src="/img/item1v2.png" alt=""></div>
@@ -210,24 +56,26 @@
         </div>
       </div>
       <div class="add">
-        <button>Add to Cart</button>
-        <button>Add to Wishlist</button>
-      </div>
-      <div class="vote">
-        <button type="button"><i class="fa-solid fa-thumbs-up"></i></button>
-        <button type="button"><i class="fa-solid fa-thumbs-down"></i></button>
+        <button id="addToCart">Add to Cart</button>
+        <button id="addToWishlist">Add to Wishlist</button>
       </div>
     </section>
     <section class="details">
       <div>
-        <h1>Larana Country Shoes</h1>
-        <p>$247.00</p>
+        <h1>Spiky Heels</h1>
+        <p class="price">&#8369;247.00</p>
         <p>Product Sold: 25</p>
-        <p>This shoes is very hard, very useful for throwing at pickpocketers when they steal something from you or just to anybody.</p>
-        <p>No worries when you need to jump off the wall from school, ,this shoes is not slippery at all.</p>
-        <p>17% Don't Recommended This, See Why:</p>
+        <p>Made from a very sharp textile found only on the Amazon Forest. This shoes will be very suitable for throwing at pickpocketers when you encounter them.</p>
+        <p></p>
+        <p>Escaping from your school guard is no problem, this shoes is very durable and can stand such vigorous activities.</p>
+        <p>If you want to leave school secretly, jumping off the wall is no problem. Our shoes sticks perfectly on the wall, you won't ever have to worry about falling.</p>
+        <div class="vote">
+        <button type="button">17% <i class="fa-solid fa-thumbs-up"></i></button>
+        <button type="button">83% <i class="fa-solid fa-thumbs-down"></i></button>
       </div>
-      <div class="comments">
+      </div>
+    </section>
+    <section class="comments">
         <h2 class="mb-5">Latest Comments</h2>
         <div class="commentItem">
           <div class="author">
@@ -269,14 +117,13 @@
             <div class="share"><i class="fas fa-share"></i> 100</div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   </main>
   <footer>
       <div class="newsletter">
         <h4>Get Updated With Our Newsletter</h4>
         <form action="#">
-          <input type="email" value="" name="email" required />
+          <input type="email" value="" name="email" placeholder="Enter your email address" required />
           <input type="submit" value="Sign Up" />
         </form>
         <input type="checkbox" name="agreement" id="agreement" />
@@ -482,6 +329,8 @@
       </div>
     </div>
   </div>
+  
+  <!-- <script src="/js/script.js"></script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
